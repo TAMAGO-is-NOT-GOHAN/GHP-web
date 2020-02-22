@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>form</title>
 </head>
+
 <body>
   <form name="Userform">
-    <input type="text" name="username"/>
-    <input type="button" onclick="PostUsername()"/>
+    <input type="text" name="username" />
+    <input type="button" onclick="PostUsername()" />
   </form>
 
   <script type="text/javascript">
     function PostUsername() {
       var value = Userform.username.value;
-      document.cookie = 'username='+value+";domain=tamago-is-not-gohan.github.io";
+      document.cookie = 'username=' + value + ";domain=tamago-is-not-gohan.github.io";
       location.href = '../maps/index.html'
     }
   </script>
 </body>
+
 </html>
