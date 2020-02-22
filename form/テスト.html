@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <title>テスト。ｈｔｍｌ</title>
 <style>
-#sample {
-	width: 700px;
-	height: 400px;
-}
+#map {
+   width: 100%;
+   height: 400px;
+   background-color: grey;
+ }
 </style>
 	<body>
+	<div id="map"></div>
+	
+	<script>
+    function initMap() {
+        var latlng = new google.maps.LatLng( 34.808502, 135.639683 );//中心の緯度, 経度
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,//ズームの調整
+          center: latlng//上で設定した中心
+        });
+        var marker = new google.maps.Marker({
+          position: latlng,
+          map: map
+        });
+      }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8unFFSZTA6GT_aHEL4e6SCQK1gcI-v5g&callback=initMap"></script>
+	
+	<!--
 	<script>
 	var map;
 	function initMap() {
-		map = new google.maps.Map(document.getElementById('sample'), { // #sampleに地図を埋め込む
+		map = new google.maps.Map(document.getElementById('map'), { // #地図を埋め込む
 			center: { // 地図の中心を指定
 			lat: 34.7019399, // 緯度
 			lng: 135.51002519999997 // 経度
@@ -20,5 +39,7 @@
 	}
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8unFFSZTA6GT_aHEL4e6SCQK1gcI-v5g&callback=initMap"></script>
+	-->
+	
 	</body>
 </html>
