@@ -7,7 +7,7 @@ fetch("https://httpbin.org/ip")
         respElem.textContent = JSON.stringify(response);
         root.appendChild(respElem);
     })
-    .catch(error => console.error('Error:', error));;
+    .catch(error => console.error('Error:', error));
 
 var url = 'https://httpbin.org/post';
 let data = { username: 'example' };
