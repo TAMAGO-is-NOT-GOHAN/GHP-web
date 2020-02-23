@@ -20,7 +20,7 @@ function getEvent(eventID) {
 function createEvent(eventName, eventDescription, eventDate, eventMaxPeople) {
     let data = { event_name: eventName, description: eventDescription, date: eventDate, max_people: eventMaxPeople };
 
-    fetch(API_ENDPOINT + "/v1/event", {
+    fetch(API_ENDPOINT + "/v1/event?user=" + user, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -34,7 +34,7 @@ function createEvent(eventName, eventDescription, eventDate, eventMaxPeople) {
 function changeEvent(eventName, eventDescription, eventDate, eventMaxPeople) {
     let data = { event_name: eventName, description: eventDescription, date: eventDate, max_people: eventMaxPeople };
 
-    fetch(API_ENDPOINT + "/v1/event", {
+    fetch(API_ENDPOINT + "/v1/event?user=" + user, {
         method: 'PUT',
         body: JSON.stringify(data),
         headers: {
@@ -48,7 +48,7 @@ function changeEvent(eventName, eventDescription, eventDate, eventMaxPeople) {
 function joinEvent(eventID) {
     let data = { event_id: eventID };
 
-    fetch(API_ENDPOINT + "/v1/event/join", {
+    fetch(API_ENDPOINT + "/v1/event/join?user=" + user, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -68,7 +68,7 @@ function getNgDate(eventID) {
 function postNgDate(eventID) {
     let data = { event_id: eventID };
 
-    fetch(API_ENDPOINT + "/v1/event/ngdate", {
+    fetch(API_ENDPOINT + "/v1/event/ngdate?user=" + user, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -94,7 +94,7 @@ function getRoute(eventID) {
 function arrivalEvent(eventID) {
     let data = { event_id: eventID };
 
-    fetch(API_ENDPOINT + "/v1/event/arrival", {
+    fetch(API_ENDPOINT + "/v1/event/arrival?user=" + user, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -121,7 +121,7 @@ function postUserLocation() {
     navigator.geolocation.getCurrentPosition(function (position) {
         let data = { lat: position.coords.latitude, lon: position.coords.longitude };
 
-        fetch(API_ENDPOINT + "/v1/user/location", {
+        fetch(API_ENDPOINT + "/v1/user/location?user=" + user, {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
