@@ -9,7 +9,7 @@ function getQueryParam(key) {
 
 let user = getQueryParam("user");
 
-const API_ENDPOINT = "https://tng-ghp-ok.appspot.com/";
+const API_ENDPOINT = "https://tng-ghp-ok.appspot.com";
 
 function getEvent(eventID) {
     fetch(API_ENDPOINT + "/v1/event?user=" + user + "&event_id=" + eventID)
@@ -126,7 +126,8 @@ function postUserLocation() {
             body: JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json'
-            }
+            },
+            mode: 'no-cors'
         })
             .then(res => res.json())
             .catch(error => console.error('Error:', error));
