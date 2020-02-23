@@ -8,7 +8,9 @@ let eventDate = document.getElementById("date-time").value;
 
 let eventMaxPeople = document.getElementById("max").value;
 
-form.addEventListener("submit", function () {
+let nameButton = document.getElementById("name-button");
+
+nameButton.addEventListener("click", function () {
     createEvent(eventName, eventDescription, eventDate, eventMaxPeople);
     let nextPage = document.createElement("a");
     nextPage.href = "../maps?user=" + getQueryParam("user");
