@@ -1,3 +1,5 @@
+postUserLocation();
+
 function getQueryParam(key) {
     // 1.URLから (指定したパラメータ名~&|$|#) で終わる箇所を抜き出し
     const value = window.location.href.match(new RegExp("[?&]" + key + "=(.*?)(&|$|#)"));
