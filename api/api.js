@@ -124,7 +124,7 @@ function getUserLocation(targetUser) {
 
 function postUserLocation() {
     navigator.geolocation.getCurrentPosition(function (position) {
-        let data = { lat: position.coords.latitude, lon: position.coords.longitude };
+        let data = { latitude: position.coords.latitude, longitude: position.coords.longitude };
 
         fetch(API_ENDPOINT + "/v1/user/location?user=" + user, {
             method: 'POST',
