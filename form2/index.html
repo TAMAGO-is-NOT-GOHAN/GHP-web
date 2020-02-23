@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-
 </head>
+
 <body>
-  
+
   <div id="nameform">
-    ここにルーム名を入力
+    <input type="text">
+    <input type="button" value="決定" onclick="getValue('text');">
   </div>
   <div id="date">
-  
+    <input type="datetime" />
+    <input type="button" value="決定" onclick="getValue('date');">
   </div>
   <div id="location">
 
@@ -21,5 +24,7 @@
 
   <div id="button">ルームを作成</div>
 
+  <script src="index.js"></script>
 </body>
+
 </html>
