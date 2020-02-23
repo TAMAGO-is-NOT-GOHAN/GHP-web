@@ -6,5 +6,4 @@ function PostUsername() {
   location.href = '../guest'
 }
 
-var element = document.getElementById('event_id')
-element.textContent = "ルームID : " + getQueryParam("event_id")
+var element = document.getElementById('event_id').textContent = "ルームID : " + getQueryParam("event_id")
