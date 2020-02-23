@@ -3,5 +3,5 @@ postUserLocation();
 
 function PostUsernameAndEventID() {
   var userName = Userform.username.value;
-  location.href = '../guestmaps/index.html' + "?username=" + userName + "?event_id" + getQueryParam('event_id')
+  location.href = '../guestmaps/index.html' + "?username=" + userName + "?event_id=" + getQueryParam('event_id')
 }
