@@ -10,16 +10,28 @@
 
 <body>
 
+  <div>
+    <label>イベントの名前</label>
+    <input type="text" id="event-name">
+  </div>
+  <div>
+    <label>詳細</label>
+    <input type="text" id="event-desc">
+  </div>
+  <div>
+    <label>日付日時</label>
+    <input type="datetime" id="date-time">
+  </div>
+  <div>
+    <label>最大参加人数</label>
+    <input type="number" id="max">
+  </div>
+  <div>
+    <button id="name-button">ルームを作成</button>
 
-  <input type="text" id="event-name">
-  <input type="text" id="event-desc">
-  <input type="datetime" id="date-time">
-  <input type="number" id="max">
-  <button id="name-button">ルームを作成</button>
 
-
-  <script src="../api/api.js"></script>
-  <script src="index.js"></script>
+    <script src="../api/api.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
