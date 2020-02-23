@@ -9,6 +9,7 @@ let eventDate = document.getElementById("date-time").value;
 let eventMaxPeople = document.getElementById("max").value;
 
 form.onSubmit = function () {
+    alert("wetretutyiuy");
     //createEvent(eventName, eventDescription, eventDate, eventMaxPeople);
     let nextPage = document.createElement("a");
     nextPage.href = "../maps?user=" + getQueryParam("user");
