@@ -9,10 +9,6 @@ let eventDate = document.getElementById("date-time").value;
 let eventMaxPeople = document.getElementById("max").value;
 
 form.onSubmit = function () {
-    try {
-        createEvent(eventName, eventDescription, eventDate, eventMaxPeople);
-    } catch (error) {
-        return false;
-    }
-    return false;
+    createEvent(eventName, eventDescription, eventDate, eventMaxPeople);
+    location.href = "../maps?user=" + getQueryParam("user");
 };
