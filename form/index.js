@@ -8,7 +8,7 @@ let eventDate = document.getElementById("date-time").value;
 
 let eventMaxPeople = document.getElementById("max").value;
 
-from.onSubmit = function () {
+form.onSubmit = function () {
     try {
         createEvent(eventName, eventDescription, eventDate, eventMaxPeople);
     } catch (error) {
