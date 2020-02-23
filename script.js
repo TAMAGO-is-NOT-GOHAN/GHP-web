@@ -3,5 +3,5 @@ postUserLocation();
 function PostUsername() {
     var value = Userform.username.value;
 
-    location.href = '../maps/index.html' + '?user=' + value;
+    location.href = '../form/index.html' + '?user=' + value;
 }
