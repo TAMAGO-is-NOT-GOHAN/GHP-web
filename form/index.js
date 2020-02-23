@@ -11,7 +11,7 @@ let eventMaxPeople = document.getElementById("max").value;
 let nameButton = document.getElementById("name-button");
 
 nameButton.addEventListener("click", function () {
-    //createEvent(eventName, eventDescription, eventDate, eventMaxPeople);
+    createEvent(eventName, eventDescription, eventDate, eventMaxPeople);
     let nextPage = document.createElement("a");
-    nextPage.href = "../maps?user=" + getQueryParam("user");
+    location.href = "../maps?user=" + getQueryParam("user");
 });
