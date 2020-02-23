@@ -23,6 +23,10 @@ let eventDate = document.getElementById("date-time").value;
 let eventMaxPeople = document.getElementById("max").value;
 
 from.onSubmit = function () {
-  createEvent(eventName, eventDescription, eventDate, eventMaxPeople);
+  try {
+    createEvent(eventName, eventDescription, eventDate, eventMaxPeople);
+  } catch (error) {
+    return false;
+  }
   return false;
 };
