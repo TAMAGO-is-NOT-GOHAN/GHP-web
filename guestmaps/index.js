@@ -22,4 +22,7 @@ let eventDate = document.getElementById("date-time").value;
 
 let eventMaxPeople = document.getElementById("max").value;
 
-from.onSubmit = createEvent(eventName, eventDescription, eventDate, eventMaxPeople);
+from.onSubmit = function () {
+  createEvent(eventName, eventDescription, eventDate, eventMaxPeople);
+  return false;
+};
