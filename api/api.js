@@ -9,7 +9,7 @@ function getQueryParam(key) {
 
 let user = getQueryParam("user");
 
-const API_ENDPOINT = "https://httpbin.org"
+const API_ENDPOINT = "https://tng-ghp-ok.appspot.com/";
 
 function getEvent(eventID) {
     fetch(API_ENDPOINT + "/v1/event?user=" + user + "&event_id=" + eventID)

@@ -1,9 +1,18 @@
-postUserLocation();
+let form = document.getElementById("nameform");
 
-function getValue(idname) {
-    // value値を取得する
-    var result = document.getElementById(idname).value;
+let eventName = document.getElementById("event-name").value;
 
-    // Alertで表示する
-    alert("value値は「" + result + "」です");
-}
+let eventDescription = document.getElementById("event-desc").value;
+
+let eventDate = document.getElementById("date-time").value;
+
+let eventMaxPeople = document.getElementById("max").value;
+
+form.onSubmit = function () {
+    try {
+        createEvent(eventName, eventDescription, eventDate, eventMaxPeople);
+    } catch (error) {
+        return false;
+    }
+    return false;
+};

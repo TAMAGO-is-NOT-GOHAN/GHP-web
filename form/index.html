@@ -10,20 +10,15 @@
 
 <body>
 
-  <div id="nameform">
-    <input type="text">
-    <input type="button" value="決定" onclick="getValue('text');">
-  </div>
-  <div id="date">
-    <input type="datetime" />
-    <input type="button" value="決定" onclick="getValue('date');">
-  </div>
-  <div id="location">
+  <form id="nameform">
+    <input type="text" id="event-name">
+    <input type="text" id="event-desc">
+    <input type="datetime" id="date-time">
+    <input type="number" id="max">
+    <button type="submit" value="ルームを作成">
+  </form>
 
-  </div>
-
-  <div id="button">ルームを作成</div>
-
+  <script src="./api/api.js"></script>
   <script src="index.js"></script>
 </body>
 
